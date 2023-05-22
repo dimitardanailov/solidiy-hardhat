@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity 0.8.18;
 
+import "hardhat/console.sol";
+
 contract HardHatToken {
   string public name = "My Hardhat Token";
   string public symbol = "MHT";
@@ -45,6 +47,13 @@ contract HardHatToken {
     // Transfer amount
     balances[msg.sender] -= amount;
     balances[to] += amount;
+
+    console.log(
+        "Transferring from %s to %s %s tokens",
+        msg.sender,
+        to,
+        amount
+    );
 
     // Notify off-chain applications of the transfer.
     emit Transfer(msg.sender, to, amount);
