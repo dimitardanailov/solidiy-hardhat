@@ -12,6 +12,7 @@ async function main() {
   const SimpleStorage = await hre.ethers.getContractFactory('SimpleStorage')
   const simpleStorage = await SimpleStorage.deploy()
   await simpleStorage.deployed()
+  console.log('Address:', simpleStorage.address)
 
   const transactionResponse = await simpleStorage.store(1)
   const transactionReceipt = await transactionResponse.wait()
