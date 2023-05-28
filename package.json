@@ -17,9 +17,11 @@
   "license": "MIT",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@solidstate/contracts": "^0.0.57",
     "hardhat": "^2.14.0"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^4.8.3"
+    "@openzeppelin/contracts": "^4.8.3",
+    "dotenv": "^16.0.3"
   }
 }
