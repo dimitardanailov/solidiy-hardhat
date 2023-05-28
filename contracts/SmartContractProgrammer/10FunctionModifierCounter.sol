@@ -30,4 +30,16 @@ contract Counter {
   function incBy(uint _x) external whenNotPaused cap(_x) {
     count += _x;
   }
+
+  modifier sandwich() {
+    // code here
+    count += 10;
+    _;
+    // more code here
+    count *= 2;
+  }
+
+  function foo() external sandwich {
+    count += 1;
+  }
 }
