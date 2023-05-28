@@ -72,4 +72,10 @@ contract IterableMapping {
   function first() external view returns (uint) {
     return balances[keys[0]];
   }
+
+  function last() external view returns (uint) {
+    address key = keys[keys.length - 1];
+    
+    return balances[key];
+  }
 }
