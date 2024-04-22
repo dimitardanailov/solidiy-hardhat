@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.18;
 
-import "./SimpleStorage.sol";
+import {SimpleStorage} from "./SimpleStorage.sol";
 
 contract StorageFactory {
   SimpleStorage public simpleStorage;
