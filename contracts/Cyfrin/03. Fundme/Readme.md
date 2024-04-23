@@ -4,7 +4,7 @@ Goals
 - Withdraw funds;
 - Set a minimum funding value in USD;
 
-Transactions - Fields
+### Transactions - Fields
 
 - `Nonce`: tx count for the account;
 - `Gas Price`: price per unit of gas (wei);
@@ -13,3 +13,8 @@ Transactions - Fields
 - `Value`: amount of wei to send;
 - `Data`: what to send to the `To` adddress
 - v,r,s: components of tx signature;
+
+### Blockchain Oracle:
+
+Any device that interacts with the off-chain world to provide external data or
+computation to smart contracts.
