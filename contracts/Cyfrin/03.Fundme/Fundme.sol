@@ -4,7 +4,6 @@ pragma solidity ^0.8.18;
 contract FundMe {
   uint256 public myValue = 1;
   
-
   function fund() public payable {
     // Allow users to send $
     // Have a minimum $ sent
@@ -15,4 +14,9 @@ contract FundMe {
     // Undo any actions that have been done, adnd send the remaining gas back
   }
   function withdraw() public {}
+
+  function getPrice() public {}
+  function getVersion() public view returns (uint256) {
+    
+  }
 }
