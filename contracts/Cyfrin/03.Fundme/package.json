@@ -1,0 +1,14 @@
+{
+  "name": "03.fundme",
+  "version": "1.0.0",
+  "description": "Goals",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@chainlink/contracts": "^1.0.0"
+  }
+}
