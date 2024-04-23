@@ -8,6 +8,7 @@ contract FundMe {
   uint256 public minimumUsd = 5e18;
   address AggregatorV3InterfaceAddress = 0x694AA1769357215DE4FAC081bf1f309aDC325306;
   address[] public funders;
+  mapping(address funder => uint256 amountFunded) public addressToAmountFunded;
 
   function fund() public payable {
     // Allow users to send $
@@ -18,6 +19,7 @@ contract FundMe {
     // What's a revert ?
     // Undo any actions that have been done, adnd send the remaining gas back
     funders.push(msg.sender);
+    addressToAmountFunded[msg.sender] = addressToAmountFunded[msg.sender] + msg.value;
   }
   function withdraw() public {}
 
